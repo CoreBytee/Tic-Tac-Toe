@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <!-- Classes -->
+    <script src="/classes/Main.js"></script>
+    <script src="/classes/Slot.js"></script>
+  </head>
+
+  <body>
+    <script src="sketch.js"></script>
+    <a class="title-text">Tic-Tac-Toe</a>
+
+    <div class="playerscore player1">
+        <a class="playername">Player 1</a>
+        <br>
+        <a class="scoredisplay">Games Won: -</a>
+    </div>
+    <div class="playerscore player2">
+        <a class="playername">Player 2</a>
+        <br>
+        <a class="scoredisplay">Games Won: -</a>
+    </div>
+
+    <div class="settingsholder">
+        <button class="restartbutton">Restart Game</button>
+        <br><br>
+        <a class="label">Board Size:</a><br>
+        <input type="number" class="boardsize">
+
+    </div>
+  </body>
+</html>

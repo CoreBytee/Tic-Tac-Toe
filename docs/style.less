@@ -1,0 +1,125 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(111, 111, 111);
+
+    .title-text {
+        @height: 60px;
+        margin-top: 20px;
+        text-align: center;
+
+        margin-top: 0px;
+        -webkit-text-stroke: 3px;
+        -webkit-text-stroke-color: black;
+
+        font-weight: bold;
+        color: rgb(79, 79, 79);
+        font-size: @height;
+
+        display: block;
+        width: 100%;
+        height: @height;
+    }
+
+    .playerscore {
+        display: block;
+        position: absolute;
+        width: 25%;
+        top: 35%;
+
+        .playername {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .scoredisplay {
+            font-size: 25px;
+        }
+
+        &.player1 {
+            right: 70%;
+            text-align: right;
+        }
+
+        &.player2 {
+            left: 70%;
+            text-align: left;
+        }
+    }
+
+    .settingsholder {
+
+        width: auto;
+        bottom: 10%;
+        display: block;
+        margin: auto;
+        position: absolute;
+
+        transform: translateX(-50%);
+        left: 50%;
+
+        .restartbutton,
+        .boardsize {
+            border-radius: 20px;
+        }
+
+        .restartbutton {
+
+            background-color: red;
+            font-size: 20px;
+            padding: 30px;
+
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(148, 0, 0);
+            }
+        }
+
+        .label {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .boardsize {
+            width: calc(100% - 33px);
+
+            font-size: 12px;
+            padding: 12px;
+            bottom: 5%;
+            text-align: center;
+
+            &::before {
+                content: "Board Size: ";
+            }
+
+            background-color: rgb(154, 154, 154);
+            border-color: rgb(65, 65, 65);
+            border-style: solid;
+            border-width: 5px;
+        }
+    }
+
+}
+
+canvas {
+    display: block;
+
+    // center in the middle vertically and horizontally
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+}
